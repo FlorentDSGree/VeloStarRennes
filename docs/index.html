@@ -10,16 +10,16 @@ body {
 
 /* Header/Logo Title */
 .header1 {
-  padding: 20px; text-align: center; background: #E89321; color: #BF0606; font-size: 34px;
+  padding: 50px; text-align: center; background: linear-gradient(#E89321,white); color: #BF0606;font-size: 34px;
 }
 .header2 {
   padding: 15px; text-align: center; background: #1299E1; color: white; font-size: 28px;
 }
 .header3 {
-  padding: 10px; text-align: left; background: white; color: #BF0606; font-size: 26px; margin-left:140px;
+  padding: 10px; text-align: left; background: white; color: #BF0606; font-size: 22px; margin-left:0px;
 }
 .horizlineorange {
-  padding: 1.5px; background: #E89321;
+  padding: 0.5px; background: #E89321;
 }
 /* Page Content */
 .content {padding:15px;margin: 0.5; text-align: justify; line-height: 1.5}
@@ -32,20 +32,30 @@ body {
 </div>
 
 <div class="content"> Les données utilisées proviennent de la platforme de Rennes Métropole 
-(Source: <a href="https://data.rennesmetropole.fr/explore/dataset/stations_vls/table/">Données</a>). Les données disponibles couvrent la 
-période de Juin 2009 à Août 2018. L'analyse et les visualisations ont été réalisés à l'aide de Python et des outils Plotly et Bokeh.
+(Source: <a href="https://data.rennesmetropole.fr/explore/dataset/stations_vls/table/">Données Vélo Star</a>). Les données disponibles couvrent la 
+période de Juin 2009 à Août 2018. L'analyse et les visualisations ont été réalisées à l'aide de Python et des outils Plotly et Bokeh.
 </div>
 
-
+<div class="header3"><b>Localisation des stations Vélo Star</b></div>
 <div class="horizlineorange"></div>
-<div class="header3"><b>Nombre de stations</b></div>
+
+<div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/LocalisationStationVeloStar.html" width="950" 
+height="550"></object>
+</div>
+
+<div class="content"> Toutes les stations sont à l'intérieur de la rocade et situées sur le territoire de la ville de Rennes. <b>10</b> stations 
+ont accès au métro (en orange sur la carte). La densité de stations est plus importante en centre-ville qu'en périphérie.
+</div>
+
+<div class="header3"><b>Nombre de station</b></div>
+<div class="horizlineorange"></div>
 
 <table style="width:100%">
   <tr>
     <td>
       <div class="content"> Il y a actuellement <b>56</b> stations Vélo Star en service. Le nombre de station a varié au fil du temps. En Juin 
-2009, 39 stations sont disponibles. Trois mois plus tard, 41 nouvelles stations sont créées pour porter à 80 le nombre total de station. Ensuite, 
-jusqu'en Août 2018 le nombre de station se maintient entre 77 et 84.
+2009, 39 stations étaient disponibles. Trois mois plus tard, 41 nouvelles stations sont créées pour porter à 80 le nombre total de station. 
+Ensuite, jusqu'en Août 2018 le nombre de station s'est maintenu entre 77 et 84.
       </div>
     </td>
     <td>
@@ -59,14 +69,15 @@ height="300"></object>
   </tr>
 </table>
 
+<div class="header3"><b>Nombre de socle</b></div>
 <div class="horizlineorange"></div>
-<div class="header3"><b>Nombre de socles</b></div>
 
 <table style="width:100%">
   <tr>
     <td>
       <div class="content"> Le nombre de socle évolue de façon similaire au nombre de station. <b>1145</b> socles composent actuellement le 
-service Vélo Star. En juin 2009, il y avait 814 socles. Ensuite de Septembre 2009 à Août 2018, le nombre de socle se maintient entre 1634 et 1755.
+service Vélo Star. En juin 2009, il y avait 814 socles. Ensuite de Septembre 2009 à Août 2018, le nombre de socle s'est maintenu entre 1634 et 
+1755.
       </div>
     </td>
     <td>
@@ -80,9 +91,8 @@ height="300"></object>
   </tr>
 </table>
 
-
+<div class="header3"><b>Analyse du nombre de socle par station</b></div>
 <div class="horizlineorange"></div>
-<div class="header3"><b>Analyse du nombre de socles par station</b></div>
 
 <table style="width:100%">
   <tr>
@@ -105,43 +115,57 @@ width="450" height="280"></object>
   </tr>
 </table>
 
-<div class="horizlineorange"></div>
-<div class="header3"><b>Localisation des stations Vélo Star</b></div>
-
-<div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/LocalisationStationVeloStar.html" width="950" 
-height="550"></object>
-</div>
-
-<div class="horizlineorange"></div>
 <div class="header3"><b>Historique de la localisation des stations Vélo Star</b></div>
+<div class="horizlineorange"></div>
 
 <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/EvolutionStationDateSlider.html" width="950" 
 height="550"></object>
 </div>
 
+<div class="header3"><b>Proximité de la station Vélo Star la plus proche</b></div>
 <div class="horizlineorange"></div>
-<div class="header3"><b>Proximité des stations Vélo Star</b></div>
 
 <table style="width:100%">
   <tr>
     <td>
       <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/ProximiteStationVeloStar.html" width="750" 
-height="450"></object>
+height="420"></object>
       </div>
     </td>
     <td>
       <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/ProximiteStationVeloStar_ColorScale.html" 
-width="150" height="450"></object>
+width="150" height="420"></object>
       </div>
     </td>  
   </tr>
 </table>
-
-
-<div class="header2"><b>Visualisation et Analyses</b></div>
-
-<div class="header1">
+<div class="content"> En centre ville, la proximité d'une station Vélo Star est bonne. En s'éloignant du centre, certraines zones sont moins 
+proche notamment au Sud-Ouest, Nord-Ouest et Nord-Est de la ville. Le Sud-Est garde une bonne proximité grâce à la station de métro Poterie.
 </div>
-<div class="content">Dernière mise à jour: 03/05/2019 
+
+<div class="header3"><b>Accessibilité au service Vélo Star</b></div>
+<div class="horizlineorange"></div>
+
+<table style="width:100%">
+  <tr>
+    <td>
+      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/AccessibiliteStationSocleVeloStar.html" width="750" 
+height="420"></object>
+      </div>
+    </td>
+    <td>
+      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/AccessibiliteStationSocleVeloStar_ColorScale.html" 
+width="150" height="420"></object>
+      </div>
+    </td>  
+  </tr>
+</table>
+<div class="content"> Cette carte montre l'accessibilité au service Vélo Star calculée en fonction de la distance et du nombre de socle par 
+station. Le centre ville a l'accessibilité la plus élevée, plus l'éloignement du centre ville augumente et plus l'accessibilité diminue. Malgré 
+la distance avec le centre ville, l'accessibilité est très importante à proximité immédiate des stations.
+</div>
+
+<div class="horizlineorange"></div>
+<div class="content">Dernière mise à jour: 07/05/2019 
 </div>
 </html>
