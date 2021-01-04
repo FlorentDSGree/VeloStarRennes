@@ -1,191 +1,116 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<style>
-/* Style the body */
-body {
-  font-family: Arial;
-  margin-left: 50px;
-  margin-right: 50px
-}
 
-/* Header/Logo Title */
-.header1 {
-  padding: 50px; text-align: center; background: linear-gradient(#E89321,white); color: #BF0606;font-size: 34px;
-}
-.header2 {
-  padding: 15px; text-align: center; background: #1299E1; color: white; font-size: 28px;
-}
-.header3 {
-  padding: 10px; text-align: left; background: white; color: #BF0606; font-size: 22px; margin-left:0px;
-}
-.horizlineorange {
-  padding: 0.5px; background: #E89321;
-}
-/* Page Content */
-.content {padding:15px;margin: 0.5; text-align: justify; line-height: 1.5}
-/* Graph */
-.graph {padding:0px;margin: 0.5; background: light blue; text-align: center}
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #E89321;
-  font-size: 60px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-</style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Underground Rennes</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link href="http://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href= "index.css">
+</head>
+ 
+<body>
+	<div class="title1">Statistics and visualisation of Vélo Star in Rennes</div>
+	<div class="title2">1. Introduction</div>
+	<p>The purpose of this study is to give some basic information about the bicycle hire service (Vélo Star) in Rennes. The data are 
+	   coming from the data platform of Rennes Métropole (<a href="https://data.rennesmetropole.fr/explore/dataset/stations_vls/table/">link to data</a>). 
+	   The data available cover the period from June 2009 to August 2018. The analysis and visualisation are done with python using the 
+	   libraries "bokeh" and "plotly" for the visualisation.</p>
+    <div class="title2">2. Localisation of stations</div>
+	<p style="margin-left:10%;margin-right:10%;text-align:centre"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/localisationStationVeloStar.html" width="950" height="550"></object></p>
+	<p>All the stations are within the ring road and are situated in Rennes's territory. <b>10</b> stations have access to the tube
+	   (orange on the map above). The station density is higher in town centre.</p>
+	<div class="title2">3. Station number</div>
+	<!-- <div class="container"> -->
+	  <table style="width:100%">
+		<tbody>
+		  <tr>
+			<td style="padding:15px">In June 2009, 39 stations are created. Three months later, 41 new stations are built to reach a total of 80 stations. 
+			    Then until August 2018 the amount of stations remains stable between 77 and 84. Since August 2018, the number of stations 
+				drops to 55.</td>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/stationNumberOverTime.html" width="850" height="300"></object></p>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	<!-- </div> -->
+	<div class="title2">4. Base number</div>
+	<!-- <div class="container"> -->
+	  <table style="width:100%">
+		<tbody>
+		  <tr>
+			<td style="padding:15px">The number of bicycle bases changes in a similar way as the number of stations. In June 2009, there were 814 bases. 
+			    From september 2009 to August 2018, the number of base stays constant between 1,634 and 1,755. From August 2018, the 
+				number of bases drops to 1,145.</td>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/bicycleBasesNumberOverTime.html" width="850" height="300"></object></p>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	<!-- </div> -->
+	<div class="title2">5. Analysis number of base per station</div>
+	<!-- <div class="container"> -->
+	  <table style="width:100%">
+		<tbody>
+		  <tr>
+			<td style="padding:15px">The number of base varies from 12 to 30. There are 13 stations having between 24 to 26 bases. 29% of the stations have 
+			    at least 16 bases. 56% of the stations have at least 20 bases. Only 11% of the stations have more than 26 bases.</td>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/distributionNombreSocle.html" width="450" height="280"></object></p>
+			</td>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/distributionCumuleeNombreSocle.html" width="450" height="280"></object></p>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	<!-- </div> -->
+	<div class="title2">6. Localisation of stations over the time</div>
+	<p style="margin-left:10%;margin-right:10%;text-align:centre"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/evolutionBicycleBasesNumberSlider.html" width="950" height="550"></object></p>
+	<p>Since 2009, there have been 98 differents stations Vélo Star. The majority of them are still active (55%) and a big part of them 
+	   removed (36%). A smaller portion of these stations has been moved (8%) and only 1% of them are now closed.</p>
+	<div class="title2">7. Proximity to station</div>
+	<div class="container">
+	  <table style="width:100%">
+		<tbody>
+		  <tr>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/proximiteStationVeloStar.html" width="750" height="420"></object></p></td>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/proximiteStationVeloStar_ColorScale.html" width="150" height="420"></object></p>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+	<p>In city centre, the proximity to a station is good. Moving away from the centre, some zones are less close to stations especially 
+	   in the South-West, North-West and North-East of the town. The South-East keeps a good proximity thanks to the station Poterie.</p>
+	<div class="title2">8. Accessibility to station</div>
+	<div class="container">
+	  <table style="width:100%">
+		<tbody>
+		  <tr>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/accessibiliteStationSocleVeloStar.html" width="750" height="420"></object></p></td>
+			<td><p><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/accessibiliteStationSocleVeloStar_ColorScale.html" width="150" height="420"></object></p>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+	<p>This map shows the accessibility to Velo Star service based on the distance and number of base per station. The city centre has the 
+	   highest accessibility while moving away reduce the accessibility. Despite the distance to the city centre, the accessibility can be 
+	   very high at immediate proximity to stations.</p>
+	
+	
+	
+	
+	
 
-<div class="container">
-  <img src="https://florentdsgree.github.io/VeloStarRennes/VeloStarBackground.jpg"" alt="Snow" style="width:100%;">
-  <div class="centered"><b>Vélo Star <br> Rennes Métropole</b>
-</div>
-</div>
 
-<div class="content"> Les données utilisées proviennent de la platforme de Rennes Métropole 
-(Source: <a href="https://data.rennesmetropole.fr/explore/dataset/stations_vls/table/">Données Vélo Star</a>). Les données disponibles couvrent la 
-période de Juin 2009 à Août 2018. L'analyse et les visualisations ont été réalisées à l'aide de Python et des outils Plotly et Bokeh. Toutes les 
-visualisations sont interactives.
-</div>
+</body>
 
-<div class="header3"><b>Localisation des stations Vélo Star</b></div>
-<div class="horizlineorange"></div>
 
-<div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/LocalisationStationVeloStar.html" width="950" 
-height="550"></object>
-</div>
 
-<div class="content"> Toutes les stations sont à l'intérieur de la rocade et situées sur le territoire de la ville de Rennes. <b>10</b> stations 
-ont accès au métro (en orange sur la carte). La densité de station est plus importante en centre-ville qu'en périphérie.
-</div>
-
-<div class="header3"><b>Nombre de station</b></div>
-<div class="horizlineorange"></div>
-
-<table style="width:100%">
-  <tr>
-    <td>
-      <div class="content"> Il y a actuellement <b>55</b> stations Vélo Star en service. Le nombre de station a varié au fil du temps. En Juin 
-2009, 39 stations étaient disponibles. Trois mois plus tard, 41 nouvelles stations sont créées pour porter à 80 le nombre total de station. 
-Ensuite, jusqu'en Août 2018 le nombre de station s'est maintenu entre 77 et 84.
-      </div>
-    </td>
-    <td>
-      <div class="content"></div>
-    </td>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/EvolutionNombreStation.html" width="850" 
-height="300"></object>
-      </div>
-    </td> 
-  </tr>
-</table>
-
-<div class="header3"><b>Nombre de socle</b></div>
-<div class="horizlineorange"></div>
-
-<table style="width:100%">
-  <tr>
-    <td>
-      <div class="content"> Le nombre de socle évolue de façon similaire au nombre de station. <b>1145</b> socles composent actuellement le 
-service Vélo Star. En juin 2009, il y avait 814 socles. Ensuite de Septembre 2009 à Août 2018, le nombre de socle s'est maintenu entre 1634 et 
-1755.
-      </div>
-    </td>
-    <td>
-      <div class="content"></div>
-    </td>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/EvolutionNombreSocle.html" width="850" 
-height="300"></object>
-      </div>
-    </td> 
-  </tr>
-</table>
-
-<div class="header3"><b>Analyse du nombre de socle par station</b></div>
-<div class="horizlineorange"></div>
-
-<table style="width:100%">
-  <tr>
-    <td>
-      <div class="content"> Le nombre de socle varie de 12 à 30. Il y a 13 stations avec un nombre de socle compris entre 24 et 26. <b>29%</b> 
-des stations ont au moins 16 socles. <b>56%</b> des stations ont au minimum 20 socles. Seulement <b>11%</b> des stations ont plus de 26 socles.
-      </div>
-    </td>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/DistributionNombreSocle.html" width="450" 
-height="280"></object>
-      </div>
-    </td>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/DistributionCumuleeNombreSocle.html" 
-width="450" height="280"></object>
-      </div>
-    </td>  
-  </tr>
-</table>
-
-<div class="header3"><b>Historique de la localisation des stations Vélo Star</b></div>
-<div class="horizlineorange"></div>
-
-<div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/EvolutionStationDateSlider.html" width="950" 
-height="550"></object>
-</div>
-
-<div class="content"> Depuis 2009, il y a eu 98 différentes stations Vélo Star. La majorité est toujours ouverte (55%) et une bonne partie 
-supprimée (36%). Une plus faible partie des stations a été deplacée (8%) et une minorité est désormais fermée (1%).
-</div>
-
-<div class="header3"><b>Proximité de la station Vélo Star la plus proche</b></div>
-<div class="horizlineorange"></div>
-
-<table style="width:100%">
-  <tr>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/ProximiteStationVeloStar.html" width="750" 
-height="420"></object>
-      </div>
-    </td>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/ProximiteStationVeloStar_ColorScale.html" 
-width="150" height="420"></object>
-      </div>
-    </td>  
-  </tr>
-</table>
-<div class="content"> En centre ville, la proximité d'une station Vélo Star est bonne. En s'éloignant du centre, certraines zones sont moins 
-proche notamment au Sud-Ouest, Nord-Ouest et Nord-Est de la ville. Le Sud-Est garde une bonne proximité grâce à la station de métro Poterie.
-</div>
-
-<div class="header3"><b>Accessibilité au service Vélo Star</b></div>
-<div class="horizlineorange"></div>
-
-<table style="width:100%">
-  <tr>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/AccessibiliteStationSocleVeloStar.html" width="750" 
-height="420"></object>
-      </div>
-    </td>
-    <td>
-      <div class="graph"><object type="text/html" data="https://florentdsgree.github.io/VeloStarRennes/AccessibiliteStationSocleVeloStar_ColorScale.html" 
-width="150" height="420"></object>
-      </div>
-    </td>  
-  </tr>
-</table>
-<div class="content"> Cette carte montre l'accessibilité au service Vélo Star calculée en fonction de la distance et du nombre de socle par 
-station. Le centre ville a l'accessibilité la plus élevée, plus l'éloignement du centre ville augumente et plus l'accessibilité diminue. Malgré 
-la distance avec le centre ville, l'accessibilité est très importante à proximité immédiate des stations.
-</div>
-
-<div class="horizlineorange"></div>
-<div class="content">Dernière mise à jour: 10/05/2019 
-</div>
 </html>
